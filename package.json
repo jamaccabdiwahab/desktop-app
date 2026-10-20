@@ -1,0 +1,40 @@
+{
+  "name": "desktop-app",
+  "version": "1.0.0",
+  "description": "My Management Desktop App",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "keywords": [],
+  "author": "Joker Editor",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^30.0.0",
+    "electron-builder": "^26.15.3"
+  },
+  "dependencies": {
+    "electron-updater": "^6.8.9"
+  },
+  "build": {
+    "appId": "com.management.app",
+    "productName": "Management System",
+    "win": {
+      "target": "nsis",
+      "icon": "first.ico"
+    },
+    "publish": {
+      "provider": "github",
+      "owner": "jamaccabdiwahab",
+      "repo": "desktop-app"
+    },
+    "files": [
+      "main.js",
+      "Habeeye.html",
+      "styles.css",
+      "first.ico",
+      "node_modules/**/*"
+    ]
+  }
+}
